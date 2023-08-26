@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './Global';
 
 const App = () => {
   const theme = {
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <GlobalStyle/>
         <Header/>
         <Outlet />
         <Footer />
