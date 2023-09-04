@@ -3,13 +3,13 @@ import { styled } from 'styled-components'
 import { Link } from "react-router-dom";
 import { Button } from '../Styles/Button';
 
-const HeroSection = () => {
+const HeroSection = ({name,image}) => {
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <p className="hero-top-data">ABOUT MYSELEF</p>
-          <h1 className="hero-heading">Reeza Website</h1>
+          <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
             My name is Reezayul hussain and I am a passout of 2023 batch . and I
             am a Frontend devloper in React.js.
@@ -21,7 +21,7 @@ const HeroSection = () => {
 
         <div className="section-hero-image">
           <picture>
-            <img src="/images/hero.svg" alt='hero-image' className="hero-img " />
+            <img src={image} alt='hero-image' className="hero-img " />
           </picture>
         </div>
       </div>
