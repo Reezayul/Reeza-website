@@ -8,6 +8,7 @@ import Contact from './Contact.jsx';
 import About from './About.jsx';
 import Home from './Home.jsx';
 import Services from './Services.jsx';
+import { AppProvider } from './Context.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +36,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+ <AppProvider>
+    <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+    </React.StrictMode>
+  </AppProvider>
 );

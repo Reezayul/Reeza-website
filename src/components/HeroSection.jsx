@@ -1,9 +1,11 @@
-import React from 'react'
-import { styled } from 'styled-components'
+import React from "react";
+import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { Button } from '../Styles/Button';
+import { Button } from "../Styles/Button";
+import { useGlobalContext } from "../Context";
 
-const HeroSection = ({name,image}) => {
+const HeroSection = ({ name, image }) => {
+  const {name1,name2} = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -11,8 +13,8 @@ const HeroSection = ({name,image}) => {
           <p className="hero-top-data">ABOUT MYSELEF</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            My name is Reezayul hussain and I am a passout of 2023 batch . and I
-            am a Frontend devloper in React.js.
+            My name is {name1} {name2} and I am a passout of 2023 batch .
+            and I am a Frontend devloper in React.js.
           </p>
           <Button className="btn hireme-btn">
             <Link to={"contacts"}>Hire me</Link>
@@ -21,13 +23,13 @@ const HeroSection = ({name,image}) => {
 
         <div className="section-hero-image">
           <picture>
-            <img src={image} alt='hero-image' className="hero-img " />
+            <img src={image} alt="hero-image" className="hero-img " />
           </picture>
         </div>
       </div>
     </Wrapper>
   );
-}
+};
 const Wrapper = styled.section`
   padding: 9rem 0;
 
@@ -80,4 +82,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default HeroSection
+export default HeroSection;
