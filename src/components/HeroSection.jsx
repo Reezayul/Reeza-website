@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { Button } from "../Styles/Button";
 import { useGlobalContext } from "../Context";
 
-const HeroSection = ({ name, image }) => {
-  const {name1,name2} = useGlobalContext();
+const HeroSection = () => {
+  const {name,image} = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -13,7 +13,7 @@ const HeroSection = ({ name, image }) => {
           <p className="hero-top-data">ABOUT MYSELEF</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            My name is {name1} {name2} and I am a passout of 2023 batch .
+            My name is Reezayul Hussain and I am a passout of 2023 batch .
             and I am a Frontend devloper in React.js.
           </p>
           <Button className="btn hireme-btn">
