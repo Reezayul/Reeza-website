@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { Button } from "../Styles/Button";
+import { Button } from "../styles/Button";
 import { useGlobalContext } from "../Context";
 
 const HeroSection = () => {
