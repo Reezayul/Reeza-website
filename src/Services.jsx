@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useGlobalContext } from "./Context";
 import { Link } from "react-router-dom";
-import { Button } from "./styles/Button";
+import { Button } from "./Styles/Button";
+import API from "./BackApi";
 
 const Services = () => {
-  const { services } = useGlobalContext();
+  const [services, setServices] = useState(API);
   console.log(services);
 
   return (
     <Wrapper className="section">
-      <h2 className="common-heading">Our Services</h2>
+      <h2 className="common-heading">My Skills</h2>
       <div className="container grid grid-three-column">
         {services.map((curElem) => {
           const { id, name, image, description } = curElem;

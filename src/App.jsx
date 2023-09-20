@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './Global';
+import GoToTop from './components/GoToTop';
 
 const App = () => {
   const theme = {
@@ -33,6 +34,7 @@ const App = () => {
         <Header/>
         <Outlet />
         <Footer />
+        <GoToTop/>
       </ThemeProvider>
     </>
   );

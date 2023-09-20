@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import HeroSection from './components/HeroSection'
 import { useGlobalContext } from './Context'
+import Services from './Services';
+import Contact from './Contact';
 
 
 const Home = () => {
@@ -15,7 +17,9 @@ const Home = () => {
   
   return (
       <div>
-      <HeroSection  />
+      <HeroSection />
+      <Services />
+      <Contact/>
     </div>
   )
 }

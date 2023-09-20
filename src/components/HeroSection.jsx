@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { Button } from "../styles/Button";
+import { Button } from "../Styles/Button";
 import { useGlobalContext } from "../Context";
 
 const HeroSection = () => {
@@ -13,8 +13,9 @@ const HeroSection = () => {
           <p className="hero-top-data">ABOUT MYSELEF</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            My name is Reezayul Hussain and I am a passout of 2023 batch .
-            and I am a Frontend devloper in React.js.
+            I am 2023 pass-out B.tech graduate and I am a front-end developer with a specialization in React.js. I am
+            passionate about using my skills and knowledge to make a positive
+            impact in the industry.
           </p>
           <Button className="btn hireme-btn">
             <Link to={"contacts"}>Hire me</Link>
